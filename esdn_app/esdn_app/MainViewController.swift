@@ -17,13 +17,9 @@ class MainViewController: UIViewController{
     
     @IBOutlet weak var UsernameLabel: UILabel!
     @IBOutlet weak var UserImage: UIImageView!
-    @IBOutlet weak var DeviceListStackView: UIStackView!
+    @IBOutlet weak var ProjectListStackView: UIStackView!
     
     func loadUserInfo(){
-        
-    }
-    
-    func loadDeviceList(){
         let user = Auth.auth().currentUser
         let db = Firestore.firestore()
         // Get Bucket from Firestore
@@ -42,15 +38,20 @@ class MainViewController: UIViewController{
                         return
                     }
                     for document in documents{
-                        let firstName: String = document.get("first_name") as! String
-                        let lastName:String  = document.get("last_name") as! String
-                        let email:String = document.get("email") as! String
+                        let username: String = document.get("username") as! String
                         let projects:Array = document.get("projects") as! Array<Any>
-                        
+                        // Print User Information
+                        UsernameLabel.text = "Hello, " + username
+                        //Load Projects
+                        loadProjectList(projects:projects)
                     }
-                    
             }
         }
+
+    }
+    
+    func loadProjectList(projects:Array<Any>){
+
 
         // Get Devices from Bucket
         
@@ -60,9 +61,7 @@ class MainViewController: UIViewController{
         // Do any additional setup after loading the view.
         super.viewDidLoad()
         // Load User Information
-        // loadUserInfo()
-        // Load Device List
-        // loadDeviceList()
+         loadUserInfo()
     }
     
     
