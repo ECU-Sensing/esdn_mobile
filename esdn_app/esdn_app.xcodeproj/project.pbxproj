@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9676FCD292ECB1B00E88840 /* InfluxDBSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9676FCC292ECB1B00E88840 /* InfluxDBSwift */; };
+		E9676FCF292ECB1B00E88840 /* InfluxDBSwiftApis in Frameworks */ = {isa = PBXBuildFile; productRef = E9676FCE292ECB1B00E88840 /* InfluxDBSwiftApis */; };
 		E9825639292D60C8000CC570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9825638292D60C8000CC570 /* AppDelegate.swift */; };
 		E982563B292D60C8000CC570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982563A292D60C8000CC570 /* SceneDelegate.swift */; };
 		E982563D292D60C8000CC570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982563C292D60C8000CC570 /* ViewController.swift */; };
@@ -92,6 +94,8 @@
 				E983AF5B292E65AC00213CFC /* FirebaseAnalytics in Frameworks */,
 				E983AF5D292E65AC00213CFC /* FirebaseAuth in Frameworks */,
 				E983AF65292E65AC00213CFC /* FirebaseStorage in Frameworks */,
+				E9676FCD292ECB1B00E88840 /* InfluxDBSwift in Frameworks */,
+				E9676FCF292ECB1B00E88840 /* InfluxDBSwiftApis in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +197,8 @@
 				E983AF60292E65AC00213CFC /* FirebaseFirestore */,
 				E983AF62292E65AC00213CFC /* FirebaseFunctions */,
 				E983AF64292E65AC00213CFC /* FirebaseStorage */,
+				E9676FCC292ECB1B00E88840 /* InfluxDBSwift */,
+				E9676FCE292ECB1B00E88840 /* InfluxDBSwiftApis */,
 			);
 			productName = esdn_app;
 			productReference = E9825635292D60C8000CC570 /* esdn_app.app */;
@@ -268,6 +274,7 @@
 			mainGroup = E982562C292D60C7000CC570;
 			packageReferences = (
 				E983AF59292E65AC00213CFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E9676FCB292ECB1B00E88840 /* XCRemoteSwiftPackageReference "influxdb-client-swift" */,
 			);
 			productRefGroup = E9825636292D60C8000CC570 /* Products */;
 			projectDirPath = "";
@@ -511,6 +518,7 @@
 				DEVELOPMENT_TEAM = 3N9D7MVPAG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = esdn_app/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ESDN;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -539,6 +547,7 @@
 				DEVELOPMENT_TEAM = 3N9D7MVPAG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = esdn_app/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ESDN;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -675,6 +684,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E9676FCB292ECB1B00E88840 /* XCRemoteSwiftPackageReference "influxdb-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/influxdata/influxdb-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E983AF59292E65AC00213CFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -686,6 +703,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E9676FCC292ECB1B00E88840 /* InfluxDBSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9676FCB292ECB1B00E88840 /* XCRemoteSwiftPackageReference "influxdb-client-swift" */;
+			productName = InfluxDBSwift;
+		};
+		E9676FCE292ECB1B00E88840 /* InfluxDBSwiftApis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9676FCB292ECB1B00E88840 /* XCRemoteSwiftPackageReference "influxdb-client-swift" */;
+			productName = InfluxDBSwiftApis;
+		};
 		E983AF5A292E65AC00213CFC /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E983AF59292E65AC00213CFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
