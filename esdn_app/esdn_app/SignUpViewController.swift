@@ -13,8 +13,14 @@ import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     
     @IBOutlet weak var ErrorLabel: UILabel!
+    @IBOutlet weak var FirstNameTextField: UITextField!
+    @IBOutlet weak var LastNameTextField: UITextField!
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -103,6 +109,8 @@ class SignUpViewController: UIViewController {
         else{
             ActivityIndicatorView.alpha = 1
             //Create the user
+            let first_name = FirstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let last_name = LastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let username = UsernameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -117,7 +125,7 @@ class SignUpViewController: UIViewController {
                     let db = Firestore.firestore()
                     let uid = result!.user.uid
                     // Add a new document in collection "users"
-                    db.collection("users").document(uid).setData(["username":username, "uid":uid, "email":email, "link":link, "projects":projects], completion: { (err) in
+                    db.collection("users").document(uid).setData(["username":username, "uid":uid, "email":email, "link":link, "projects":projects, "first_name":first_name, "last_name":last_name], completion: { (err) in
                         // Error Check for Doc Creation
                         if let err = err {
                             print("Error writing document: \(err.localizedDescription)")

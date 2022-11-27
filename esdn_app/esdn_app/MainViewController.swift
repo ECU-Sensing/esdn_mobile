@@ -38,12 +38,12 @@ class MainViewController: UIViewController{
                         return
                     }
                     for document in documents{
-                        let username: String = document.get("username") as! String
-                        let projects:Array = document.get("projects") as! Array<Any>
+                        let first_name: String = document.get("first_name") as! String
+                        //let projects:Array = document.get("projects") as! Array<Any>
                         // Print User Information
-                        UsernameLabel.text = "Hello, " + username
+                        UsernameLabel.text = "Hello, " + first_name
                         //Load Projects
-                        loadProjectList(projects:projects)
+                        //loadProjectList(projects:projects)
                     }
             }
         }
@@ -51,8 +51,6 @@ class MainViewController: UIViewController{
     }
     
     func loadProjectList(projects:Array<Any>){
-
-
         // Get Devices from Bucket
         
     }

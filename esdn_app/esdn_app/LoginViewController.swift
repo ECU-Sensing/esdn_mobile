@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var SignUpButton: UIButton!
     @IBOutlet weak var ErrorLabel: UILabel!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad(){
         // Do any additional setup after loading the view.
         super.viewDidLoad()
