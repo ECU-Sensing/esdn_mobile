@@ -62,5 +62,20 @@ class MainViewController: UIViewController{
          loadUserInfo()
     }
     
+    //================================================================================
+    // transitionToProfile() is used to transition to the Profile View Controller.
+    // Helper Function
+    //================================================================================
+    func transitionToProfile(){
+        let profileViewController =  self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.profileViewController) as? ProfileViewController
+        
+        self.view.window?.rootViewController = profileViewController
+        self.view.window?.makeKeyAndVisible()
+        
+    }
+    //================================================================================
     
+    @IBAction func ProfileButtonClicked(_ sender: Any) {
+        transitionToProfile()
+    }
 }
