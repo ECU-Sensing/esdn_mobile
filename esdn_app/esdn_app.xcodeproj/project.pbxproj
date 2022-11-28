@@ -10,6 +10,12 @@
 		E954ADA22933B91D00EF595D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA12933B91D00EF595D /* ProfileViewController.swift */; };
 		E954ADA32933B91D00EF595D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA12933B91D00EF595D /* ProfileViewController.swift */; };
 		E954ADA42933B91D00EF595D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA12933B91D00EF595D /* ProfileViewController.swift */; };
+		E954ADA62933CF2800EF595D /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA52933CF2800EF595D /* ProjectListViewController.swift */; };
+		E954ADA72933CF2800EF595D /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA52933CF2800EF595D /* ProjectListViewController.swift */; };
+		E954ADA82933CF2800EF595D /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA52933CF2800EF595D /* ProjectListViewController.swift */; };
+		E954ADAA2933D27700EF595D /* MainSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA92933D27700EF595D /* MainSwiftUIView.swift */; };
+		E954ADAB2933D27700EF595D /* MainSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA92933D27700EF595D /* MainSwiftUIView.swift */; };
+		E954ADAC2933D27700EF595D /* MainSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954ADA92933D27700EF595D /* MainSwiftUIView.swift */; };
 		E9676FCD292ECB1B00E88840 /* InfluxDBSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9676FCC292ECB1B00E88840 /* InfluxDBSwift */; };
 		E9676FCF292ECB1B00E88840 /* InfluxDBSwiftApis in Frameworks */ = {isa = PBXBuildFile; productRef = E9676FCE292ECB1B00E88840 /* InfluxDBSwiftApis */; };
 		E9825639292D60C8000CC570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9825638292D60C8000CC570 /* AppDelegate.swift */; };
@@ -68,6 +74,8 @@
 
 /* Begin PBXFileReference section */
 		E954ADA12933B91D00EF595D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E954ADA52933CF2800EF595D /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
+		E954ADA92933D27700EF595D /* MainSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSwiftUIView.swift; sourceTree = "<group>"; };
 		E9825635292D60C8000CC570 /* esdn_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = esdn_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9825638292D60C8000CC570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E982563A292D60C8000CC570 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +171,8 @@
 				E983AF7E292E76A900213CFC /* Constants.swift */,
 				E99045962932FBAA009426A6 /* ProjectListUIView.swift */,
 				E954ADA12933B91D00EF595D /* ProfileViewController.swift */,
+				E954ADA52933CF2800EF595D /* ProjectListViewController.swift */,
+				E954ADA92933D27700EF595D /* MainSwiftUIView.swift */,
 			);
 			path = esdn_app;
 			sourceTree = "<group>";
@@ -336,11 +346,13 @@
 				E983AF77292E6A5200213CFC /* LoginViewController.swift in Sources */,
 				E983AF6F292E680900213CFC /* SignUpViewController.swift in Sources */,
 				E954ADA22933B91D00EF595D /* ProfileViewController.swift in Sources */,
+				E954ADAA2933D27700EF595D /* MainSwiftUIView.swift in Sources */,
 				E982563D292D60C8000CC570 /* ViewController.swift in Sources */,
 				E982566F292D6BA2000CC570 /* DeviceStackView.swift in Sources */,
 				E9825639292D60C8000CC570 /* AppDelegate.swift in Sources */,
 				E982563B292D60C8000CC570 /* SceneDelegate.swift in Sources */,
 				E99045972932FBAA009426A6 /* ProjectListUIView.swift in Sources */,
+				E954ADA62933CF2800EF595D /* ProjectListViewController.swift in Sources */,
 				E983AF67292E67DA00213CFC /* MainViewController.swift in Sources */,
 				E983AF7F292E76A900213CFC /* Constants.swift in Sources */,
 			);
@@ -350,10 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E954ADAB2933D27700EF595D /* MainSwiftUIView.swift in Sources */,
 				E99045982932FBAA009426A6 /* ProjectListUIView.swift in Sources */,
 				E983AF80292E76A900213CFC /* Constants.swift in Sources */,
 				E983AF78292E6A5200213CFC /* LoginViewController.swift in Sources */,
 				E9825650292D60DC000CC570 /* esdn_appTests.swift in Sources */,
+				E954ADA72933CF2800EF595D /* ProjectListViewController.swift in Sources */,
 				E954ADA32933B91D00EF595D /* ProfileViewController.swift in Sources */,
 				E983AF70292E680900213CFC /* SignUpViewController.swift in Sources */,
 				E983AF68292E67DA00213CFC /* MainViewController.swift in Sources */,
@@ -372,6 +386,8 @@
 				E983AF71292E680900213CFC /* SignUpViewController.swift in Sources */,
 				E954ADA42933B91D00EF595D /* ProfileViewController.swift in Sources */,
 				E983AF81292E76A900213CFC /* Constants.swift in Sources */,
+				E954ADA82933CF2800EF595D /* ProjectListViewController.swift in Sources */,
+				E954ADAC2933D27700EF595D /* MainSwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
